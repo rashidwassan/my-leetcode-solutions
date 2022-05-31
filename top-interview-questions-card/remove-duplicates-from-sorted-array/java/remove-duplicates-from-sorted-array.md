@@ -9,7 +9,7 @@ Since it is impossible to change the length of the array in some languages, you 
 - You must do this by modifying the input array in-place with O(1) extra memory.
 
 >Example
-```
+```dart
 zInput: nums = [1,1,2]
 Output: 2, nums = [1,2,_]
 Explanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
