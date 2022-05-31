@@ -14,11 +14,15 @@ rotate 3 steps to the right: [5,6,7,1,2,3,4]
 ```Java
 class Solution {
     public void rotate(int[] nums, int k) {
-         int[] temp = new int[nums.length];
-        for(int i=0;i<nums.length;i++){
-            temp[(i+k)%nums.length] = nums[i];
+        // creating a temporary array
+        int[] temp = new int[nums.length];
+        // storing last elements of `nums` into first of new array
+        for (int i = 0; i < nums.length; i++) {
+            // here ((i + k) % nums.length) give first indices -
+            // when the end of array is reached.
+            temp[(i + k) % nums.length] = nums[i];
         }
-        for(int i=0;i<nums.length;i++){
+        for (int i = 0; i < nums.length; i++) {
             nums[i] = temp[i];
         }
     }
